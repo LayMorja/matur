@@ -1,0 +1,280 @@
+.hero {
+   position: relative;
+   padding-top: rem(260);
+   padding-bottom: rem(120);
+   margin-bottom: rem(80);
+   @media(max-width: $mobile) {
+      padding-top: rem(160);
+      padding-bottom: rem(60);
+   }
+   @media(max-width: $mobileSmall) {
+      padding-top: rem(120);
+      padding-bottom: rem(40);
+   }
+   &__slider {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      .slick-list,
+      .slick-list .slick-track,
+      .slick-list .slick-slide,
+      .slick-list .slick-slide div {
+         height: 100%;
+      }
+   }
+
+   &__slide {
+      @extend %bg-cov;
+      min-height: 100vh;
+   }
+
+   &__body {
+      padding-left: rem(15);
+      position: relative;
+      z-index: 2;
+      @extend %fl-a-ct;
+      justify-content: space-between;
+      color: var(--clr-white);
+      gap: rem(25);
+      @media(max-width: em(1089.98)) {
+         flex-wrap: wrap;
+      }
+      @media(max-width: $tablet) {
+         flex-direction: column;
+      }
+      @media(max-width: $mobileSmall) {
+         padding-left: rem(10);
+      }
+   }
+
+   &__content {
+      h1 {
+         max-width: rem(480);
+         font-weight: 900;
+         font-size: rem(44);
+         line-height: 100%;
+         color: var(--clr-white);
+         position: relative;      
+         &::before {
+            content: "";
+            position: absolute;
+            top: rem(22);
+            left: -100%;
+            margin-left: rem(-13);
+            width: 100%;
+            height: 2px;
+            border: 2px dashed #FBBC1B;
+         }
+         @media(max-width: $mobileNormal) {
+            font-size: rem(40);
+         }
+         @media(max-width: $mobileSmall) {
+            font-size: rem(32);
+         }
+      }
+      p {
+         margin-top: rem(20);
+         font-weight: 500;
+         font-size: rem(18);
+         line-height: 1.25;
+         @media(max-width: $mobileSmall) {
+            font-size: rem(16);
+         }
+      }
+      div {
+         @extend %fl-r-ct;
+         margin-top: rem(40);
+         @media(max-width: $mobileNormal) {
+            flex-direction: column;
+         }
+      }
+      div button {
+         @extend %fl-a-ct;
+         padding: rem(20) rem(34);
+         background-color: var(--clr-yellow);
+         border-radius: em(100);
+         box-shadow: 0px 4px 50px rgba(251, 188, 27, 0.31);
+         font-weight: 700;
+         line-height: 1.25;
+         color: var(--clr-black);
+         transition: box-shadow 0.32s ease-in-out;
+         @media(any-hover: hover) {
+            &:hover {
+               box-shadow: 0px 4px 50px rgba(251, 188, 27, 0.51);
+            }
+         }
+         &:focus {
+            outline: none;
+            box-shadow: 0px 4px 50px rgba(251, 188, 27, 0.51);
+         }
+         @media(max-width: $mobileNormal) {
+            width: 100%;
+         }
+      }
+      div a {
+         @extend %fl-r-ct;
+         margin-left: rem(40);
+         font-weight: 900;
+         line-height: 1.25;
+         @media(any-hover: hover) {
+            &:hover {
+               svg {
+                  transform: translateX(rem(5));
+               }
+            }
+         }
+         &:focus {
+            outline: none;
+            svg {
+               transform: translateX(rem(5));
+            }
+         }
+         @media(max-width: $mobileNormal) {
+            margin-left: 0;
+            margin-top: rem(20);
+         }
+      }
+      div a svg {
+         flex: 0 0 rem(35);
+         width: rem(35);
+         height: rem(35);
+         margin-left: rem(10);
+         transition: transform 0.32s ease-in-out;
+      }
+   }
+
+   &__benefits {
+      padding: rem(8) rem(10);
+      padding-right: 0;
+      border-left: 1px dashed var(--clr-white);
+      li:not(:last-child) {
+         margin-bottom: em(40);
+      }
+      li h2 {
+         font-weight: 900;
+         font-size: rem(28);
+         line-height: 1.25;
+         @media(max-width: $mobileSmall) {
+            font-size: rem(22);
+         }
+      }
+      li p {
+         line-height: 1.25;
+         @media(max-width: $mobileSmall) {
+            font-size: rem(14);
+         }
+      }
+      @media(max-width: $tablet) {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: rem(20);
+         padding-left: rem(20);
+         margin-top: rem(20);
+         margin-bottom: rem(20);
+         li:not(:last-child) {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   &__action {
+      position: relative;
+      z-index: 24;
+      padding: rem(88) rem(32) rem(30);
+      text-align: right;
+      border: 2px solid var(--clr-white);
+      box-shadow: inset 2px 2px 15px rgba(255, 255, 255, 0.4),
+                        2px 2px 15px rgba(255, 255, 255, 0.4);
+      border-radius: rem(20);
+      div {
+         position: absolute;
+         top: rem(26);
+         left: rem(-17);
+         padding: rem(10) rem(36);
+         border-radius: rem(8);
+         box-shadow: 0px 4px 50px rgba(251, 188, 27, 0.31);
+         background-color: var(--clr-yellow);
+         font-weight: 900;
+         font-size: rem(18);
+         line-height: 1.25;
+         color: var(--clr-black);
+      }
+      span {
+         font-weight: 900;
+         font-size: rem(17);
+         line-height: 0.9;
+      }
+      p {
+         font-weight: 900;
+         font-size: rem(88);
+         line-height: 0.9;    
+         color: var(--clr-yellow);
+         text-shadow: 0px 0px 20px rgba(251, 188, 27, 0.54);
+      }
+   }
+
+   &__action-line {
+   }
+
+   &__pagination {
+      padding-left: rem(15);
+      max-width: max-content;
+      margin-top: max(rem(25), 10vh);
+      position: relative;
+      z-index: 2;
+      .slick-dots {
+         @extend %fl-r-bt;
+      }
+      .slick-dots li:not(:last-child) {
+         margin-right: rem(8);
+      }
+      .slick-dots li button {
+         font-weight: 900;
+         font-size: rem(18);
+         line-height: 1;
+         color: rgba(255, 255, 255, 0.4);
+         transition: all 0.3s ease;
+         @media(any-hover: hover) {
+            &:hover {
+               color: rgba(255, 255, 255, 0.6);
+            }
+         }
+         &:focus {
+            outline: none;
+            color: rgba(255, 255, 255, 0.6);
+         }
+      }
+      .slick-dots li.slick-active button {
+         font-weight: 900;
+         font-size: rem(28);
+         line-height: 1;
+         color: rgba(255, 255, 255, 0.7);
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         top: 70%;
+         right: rem(-130);
+         width: rem(114);
+         height: 1px;
+         border: 1px dashed var(--clr-white);
+         transform: translateY(-70%);
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         top: 75%;
+         transform: translateY(-75%);
+         right: rem(-136);
+         width: rem(6);
+         height: rem(6);
+         border-radius: 50%;
+         background-color: var(--clr-white);
+      }
+      @media(max-width: $mobileSmall) {
+         padding-left: rem(10);
+      }
+   }
+}

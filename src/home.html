@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <title>Главная страница</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">      
+      @@include("./html/_meta.html",{
+         "description":"",
+         "keywords":""
+      })
+      @@include("./html/_styles-vendors.html",{})
+      <link rel="shortcut icon" href="@resources/favicon.ico" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper" data-sticky>
+         @@include("./html/_header.html",{
+            "class":"header--home",
+         })         
+         <main class="page">
+            <section class="page__hero hero" data-fullscreen>
+               <div class="hero__slider">
+                  <div data-fullscreen style="background-image: url('@temp/hero-bg.jpg');"></div>
+                  <div data-fullscreen style="background-image: url('@temp/hero-bg.jpg');"></div>
+                  <div data-fullscreen style="background-image: url('@temp/hero-bg.jpg');"></div>
+               </div>
+               <div class="hero__container container">
+                  <div class="hero__body">
+                     <div class="hero__content">
+                        <h1>Стильные кухни по <span class="_yl">вашим</span> размерам</h1>
+                        <p>Лучшие цены на кухни от производителя в городе</p>
+                        <div>
+                           <button data-popup="#">Рассчитать стоимость</button>
+                           <a href="#">
+                              <span>Перейти в каталог</span>
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#right-arrow">
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                     <ul class="hero__benefits">
+                        <li>
+                           <h2>30 дней</h2>
+                           <p>срок изготовления</p>
+                        </li>
+                        <li>
+                           <h2>500+</h2>
+                           <p>видов фасадов</p>
+                        </li>
+                        <li>
+                           <h2>100+</h2>
+                           <p>видов столешниц</p>
+                        </li>
+                        <li>
+                           <h2>Бесплатный</h2>
+                           <p>выезд дизайнера</p>
+                        </li>
+                     </ul>
+                     <div class="hero__action">
+                        <div class="hero__action-line">
+                           до 30 января!
+                        </div>
+                        <span>скидки до</span>
+                        <p>-35</p>
+                     </div>
+                  </div>
+                  <div class="hero__pagination"></div>
+               </div>
+            </section>
+            <section class="page__catalog catalog" id="catalog">
+               <div class="catalog__container container">
+                  <div class="catalog__block-header block-header">
+                     <svg>
+                        <use xlink:href="@img/sprite.svg#right-arrow">
+                     </svg>
+                     <h2>Каталог кухонь</h2>
+                     <p>Лучшие цены на кухни от производителя в городе</p>
+                  </div>
+                  <div class="catalog__body">
+                     <a href="#">
+                        <span>Маленькие кухни</span>
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#right-arrow">
+                        </svg>
+                        <img src="@temp/catalog/01.jpg" alt="Маленькие кухни">
+                     </a>
+                     <a href="#">
+                        <span>Угловые кухни</span>
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#right-arrow">
+                        </svg>
+                        <img src="@temp/catalog/02.jpg" alt="Угловые кухни">
+                     </a>
+                     <a href="#">
+                        <span>Прямые кухни</span>
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#right-arrow">
+                        </svg>
+                        <img src="@temp/catalog/03.jpg" alt="Прямые кухни">
+                     </a>
+                     <a href="#">
+                        <span>Кухни со стойкой</span>
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#right-arrow">
+                        </svg>
+                        <img src="@temp/catalog/04.jpg" alt="Кухни со стойкой">
+                     </a>
+                     <a href="#">
+                        <span>Кухни с цветными фасадами</span>
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#right-arrow">
+                        </svg>
+                        <img src="@temp/catalog/05.jpg" alt="Кухни с цветными фасадами">
+                     </a>
+                  </div>
+               </div>
+            </section>
+            <section class="page__steps steps" id="steps" style="background-image: url('@temp/steps/bg.jpg');">
+               <div class="steps__container container">
+                  <div class="steps__body">
+                     <div class="steps__tip">
+                        только до 1 января
+                     </div>
+                     <h2>
+                        Выезд дизайнера <span class="_yl">бесплатно</span>
+                     </h2>
+                     <p>
+                        Лучшие цены на кухни от производителя в городе
+                     </p>
+                     <ul class="steps__steps">
+                        <li>
+                           <span>
+                              Выезд дизайнера в удобное для вас время
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              Бесплатный замер с учетом всех нюансов
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              Бесплатный 3D проект вашей будущей кухни
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              Скидки до 70%
+                           </span>
+                        </li>
+                     </ul>
+                     <form action="./mail.php" method="POST" class="steps__form">
+                        <input autocomplete="off" type="tel" name="Номер телефона" placeholder="номер телефона">
+                        <input type="submit" value="Оставить заявку">
+                     </form>
+                  </div>
+               </div>
+            </section>
+         </main>
+         @@include("./html/_footer.html",{})
+      </div>
+      @@include("./html/_js-vendors.html",{})
+   </body>
+</html>

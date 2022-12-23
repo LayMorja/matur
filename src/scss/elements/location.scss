@@ -1,0 +1,14 @@
+.location {
+   @extend %fl-r-ct;
+   svg {
+      display: block;
+      width: rem(18);
+      height: rem(18);
+   }
+   span {
+      margin-left: rem(10);
+      font-weight: 900;
+      font-size: rem(14);
+      line-height: 1.28;
+   }
+}

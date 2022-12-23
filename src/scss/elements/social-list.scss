@@ -1,0 +1,33 @@
+.social-list {
+   @extend %fl-r-ct;
+   li:not(:last-child) {
+      margin-right: rem(12);
+   }
+   li a {
+      @extend %fl-a-ct;
+      width: rem(38);
+      height: rem(38);
+      border-radius: 50%;
+      background-color: var(--clr-white);
+      @media(any-hover: hover) {
+         &:hover {
+            svg {
+               transform: scale(1.2) rotate(-360deg);
+            }
+         }
+      }
+      &:focus {
+         outline: none;
+         svg {
+            transform: scale(1.2) rotate(-360deg);
+         }
+      }
+   }
+   li a svg {
+      display: block;
+      flex: 0 0 rem(18);
+      width: rem(18);
+      height: rem(18);
+      transition: transform 0.32s ease-in-out;
+   }
+}

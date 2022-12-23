@@ -1,0 +1,53 @@
+.callback {
+   display: grid;
+   grid-template-columns: rem(32) 1fr;
+   column-gap: rem(20);
+   a:not(.callback__link) {
+      align-self: center;
+      @extend %fl-a-ct;
+      width: rem(32);
+      height: rem(32);
+      border-radius: 50%;
+      background-color: var(--clr-yellow);
+      grid-row: span 2;
+   }
+   a:not(.callback__link) svg {
+      display: block;
+      width: rem(18);
+      height: rem(18);
+      transition: transform 320ms ease-in-out;
+   }   
+   &__link {
+      font-weight: 900;
+      font-size: rem(18);
+      line-height: 1.25;
+      transition: all 0.32s ease-in-out;
+      @media(any-hover: hover) {
+         &:hover {
+            opacity: 0.8;
+         }
+      }
+      &:focus {
+         outline: none;
+         opacity: 0.8;
+      }
+   }
+   button {
+      font-size: rem(14);
+      line-height: 1.25;
+      text-align: right;
+      text-decoration: underline;
+      transition: all 0.32s ease-in-out;
+      @media(any-hover: hover) {
+         &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+         }
+      }
+      &:focus {
+         outline: none;
+         text-decoration: none;
+         opacity: 0.8;
+      }
+   }
+}
