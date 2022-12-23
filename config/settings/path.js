@@ -39,4 +39,12 @@ export const path = {
 	buildFolder: buildFolder,
 	srcFolder: srcFolder,
    rootFolder: rootFolder,
+   ftp: `www/laymorja.site`,
+}
+
+export const ftpSetting = {
+   host: "37.140.192.135",
+   user: "u1665794",
+   password: "rpCkZk5yZ257XYrx",
+   parallel: 10,
 }

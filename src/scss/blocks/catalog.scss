@@ -37,6 +37,17 @@
          &:hover {
             transform: translateY(rem(-5));
             box-shadow: 0px 5px 5px rgba(80, 80, 80, 0.6);
+            svg {
+               transform: translateY(rem(-5));
+            }
+         }
+      }
+      &:focus {
+         outline: none;
+         transform: translateY(rem(-5));
+         box-shadow: 0px 5px 5px rgba(80, 80, 80, 0.6);
+         svg {
+            transform: translateY(rem(-5));
          }
       }
    }
@@ -70,6 +81,7 @@
       display: block;
       width: rem(42);
       height: rem(42);
+      transition: transform 0.32s ease-in-out;
    }
 }
 

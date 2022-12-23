@@ -8,10 +8,13 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
+    "bulidZip": "gulp bulidZip --build",
+    "buildFTP": "gulp buildFTP --build",
     "cmsDev": "gulp cmsDev",
     "cmsBuild": "gulp cmsBuild --build",
-    "fonts": "gulp fonts --rewrite",
     "cmsZip": "gulp cmsZip --build",
+    "cmsFTP": "gulp cmsFTP --build",
+    "fonts": "gulp fonts --rewrite",
     "zip": "gulp bulidZip --build"
   },
   "type": "module",
@@ -41,6 +44,7 @@
     "gulp-ttf2woff2": "latest",
     "gulp-typograf": "latest",
     "gulp-uglify-es": "latest",
+    "gulp-util": "^3.0.8",
     "gulp-version-number": "latest",
     "gulp-zip": "latest",
     "inputmask": "latest",
@@ -51,6 +55,7 @@
     "swiper": "latest",
     "tippy.js": "latest",
     "vanilla-lazyload": "latest",
+    "vinyl-ftp": "^0.6.1",
     "webp-converter": "2.2.3",
     "webpack": "latest",
     "webpack-stream": "latest"

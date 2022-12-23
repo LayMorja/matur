@@ -120,11 +120,18 @@ body {
 @import "elements/menu";
 @import "elements/social-list";
 @import "elements/block-header";
+@import "elements/sales-slider";
+@import "elements/sales-card";
+@import "elements/page-link";
+@import "elements/tip";
+@import "elements/request-form";
 
 // Подключение крупных блоков
 @import "blocks/hero";
 @import "blocks/catalog";
 @import "blocks/steps";
+@import "blocks/sales";
+@import "blocks/request";
 
 // Подключение стилей общих элементов проекта
 @import 'common';

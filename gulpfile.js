@@ -28,6 +28,7 @@ import { resources } from "./config/tasks/resources.js";
 import { sprite } from "./config/tasks/sprite.js";
 import { temp } from "./config/tasks/temp.js";
 import { zip } from "./config/tasks/zip.js";
+import { ftp } from "./config/tasks/ftp.js";
 
 //* Слежка за изменениями
 function watcher() {
@@ -50,10 +51,12 @@ const cmsTasks = gulp.series(fonts, gulp.parallel(html, css, js, jsVendors, imag
 const dev = gulp.series(reset, buildTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, buildTasks);
 const bulidZip = gulp.series(build, zip);
+const buildFTP = gulp.series(build, ftp);
 
 const cmsDev = gulp.series(reset, cmsTasks, gulp.parallel(watcher, server));
 const cmsBuild = gulp.series(reset, cmsTasks);
 const cmsZip = gulp.series(cmsBuild, zip);
+const cmsFTP = gulp.series(cmsBuild, ftp);
 
 //* Экспорт задач
 export { reset };
@@ -69,14 +72,16 @@ export { sprite };
 export { temp };
 
 //* Экспорт сценариев выполнения
-export { dev };
-export { build };
-export { cmsDev };
-export { cmsBuild };
 export { buildTasks };
 export { cmsTasks };
+export { dev };
+export { build };
 export { bulidZip };
+export { buildFTP };
+export { cmsDev };
+export { cmsBuild };
 export { cmsZip };
+export { cmsFTP };
 
 //* Сценарий по умолчанию (Gulp)
 gulp.task('default', dev);

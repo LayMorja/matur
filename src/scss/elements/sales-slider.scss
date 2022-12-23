@@ -1,0 +1,12 @@
+.sales-slider {
+   &:not(.slick-initialized) {
+      @extend %fl-r-ct;
+      justify-content: space-between;
+      .sales-card {
+         flex: 1 1 auto;
+      }
+   }
+   .slick-slide:not(:last-child) {
+      margin-right: rem(19);
+   }
+}

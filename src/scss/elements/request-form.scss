@@ -1,0 +1,104 @@
+.request-form {
+   &__item {
+      > span {
+         font-size: rem(14);
+         line-height: 1.25;
+         color: rgba(255, 255, 255, 0.7);
+         ~ * {
+            margin-top: rem(6);
+         }
+      }
+      &:not(:last-child) {margin-bottom: rem(20);}
+   }
+
+   &__file {
+      @extend %fl-r-ct;
+      justify-content: space-between;
+      padding-bottom: rem(20);
+      margin-bottom: rem(20);
+      border-bottom: 1px dashed var(--clr-white);
+      div {
+         margin-right: rem(24);
+      }
+      div p {
+         font-weight: 700;
+         font-size: rem(14);
+         line-height: 1.25;
+      }
+      div span {
+         font-size: rem(12);
+         line-height: 1.25;
+      }
+      input[type="file"] {display: none;}
+      label {
+         cursor: pointer;
+         @extend %fl-r-ct;
+         padding: rem(12) rem(20);
+         border-radius: em(100);
+         border: 1px solid var(--clr-white);
+         svg {
+            display: block;
+            margin-right: rem(10);
+            flex: 0 0 rem(24);
+            width: rem(24);
+            height: rem(24);
+            transition: transform 0.32s ease-in-out;
+         }
+         span {
+            font-weight: 700;
+            font-size: rem(14);
+            line-height: 1.25;
+            white-space: nowrap;
+         }
+         @media(any-hover: hover) {
+            &:hover {
+               svg {
+                  transform: translateY(rem(-2));
+               }
+            }
+         }
+         &:focus {
+            outline: none;
+            svg {
+               transform: translateY(rem(-2));
+            }
+         }
+      }
+   }
+
+   input {
+      width: 100%;
+      @extend %fl-a-ct;
+      text-align: center;
+   }
+
+   input:not([type="submit"]) {
+      height: rem(60);
+      padding: rem(12) rem(20);
+      border: 1px solid var(--clr-white);
+      border-radius: em(100);
+      background-color: transparent;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--clr-white);
+      transition: box-shadow 0.3s ease-in-out;
+      @media(any-hover: hover) {
+         &:hover {
+            box-shadow: inset 2px 2px 15px rgba(255, 255, 255, 0.4);
+         }
+      }
+      &:focus {
+         outline: none;
+         box-shadow: inset 2px 2px 15px rgba(255, 255, 255, 0.4),
+         2px 2px 15px rgba(255, 255, 255, 0.4);
+      }
+   }
+
+   input[type="submit"] {
+      padding: rem(20) rem(30);
+      border-radius: em(100);
+      background-color: var(--clr-yellow);
+      font-weight: 700;
+      line-height: 1.25;
+   }
+}

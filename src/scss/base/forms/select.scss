@@ -5,16 +5,20 @@
 	// .select__body
 	&__body {
 		position: relative;
+      font-weight: 700;
+      font-size: rem(14);
+      line-height: 1.25;
 	}
 	// .select__title
 	&__title {
 		color: inherit;
 		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
 		cursor: pointer;
 		width: 100%;
-		border-radius: 4px;
+      padding: rem(11) rem(20);
+      border: 1px solid var(--clr-white);
+		border-radius: em(100);
+      font-weight: 700;
 	}
 	// .select__value
 	&__value {
@@ -28,8 +32,12 @@
 		}
 		&:after {
 			content: "";
-			align-self: stretch;
-			flex: 0 0 10px;
+         width: 0;
+         height: 0;
+         border-top: rem(8) solid var(--clr-yellow);
+         border-right: rem(7) solid transparent;
+         border-left: rem(7) solid transparent;
+         border-radius: 50%;
 			transition: all 0.3s ease 0s;
 			display: flex;
 			justify-content: center;
@@ -56,17 +64,16 @@
 	}
 	// .select__options
 	&__options {
-		color: #000;
 		position: absolute;
-		top: 29px;
-		border-radius: 0 0 4px 4px;
+		top: rem(55);
+		border-radius: rem(8);
+      overflow: hidden;
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
-		border-top: 0;
-		border: 1px solid #d9d9d9;
-		border-top: 0;
-		padding: 10px 0px 5px 0px;
+		padding-top: rem(5);
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(255, 255, 255, 1);
+      border-top: none;
 	}
 	// .select__scroll
 	&__scroll {
@@ -89,12 +96,13 @@
 		cursor: pointer;
 		padding: 5px 15px;
 		color: inherit;
+      color: rgb(90, 90, 90);
 		&._select-selected {
 			background-color: #eee;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				background: rgba(0, 0, 0, 0.2);
 			}
 		}
 	}

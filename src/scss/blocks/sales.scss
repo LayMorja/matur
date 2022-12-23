@@ -1,0 +1,58 @@
+.sales {
+   margin-top: rem(100);
+   margin-bottom: rem(100);
+   &__block-header {
+      &:not(:last-child) {margin-bottom: rem(50);}
+      @media(max-width: $mobileSmall) {
+         &:not(:last-child) {margin-bottom: rem(30);}
+      }
+   }
+   @media(max-width: $mobileSmall) {
+      margin-bottom: rem(80);
+      margin-top: rem(80);
+   }
+   &__slider-box {
+      position: relative;
+   }
+
+   &__prev,
+   &__next {
+      position: absolute;
+      top: 30%;
+      transform: translateY(-30%);
+      transition: opacity 0.32s ease-in-out;
+      svg {
+         display: block;
+         width: rem(30);
+         height: rem(30);
+      }
+      &.slick-disabled {
+         opacity: 0.3;
+      }
+      @media(max-width: $mobileNormal) {
+         display: none;
+      }
+   }
+
+   &__prev {
+      left: rem(-60);
+      svg {
+         transform: rotate(-180deg);
+      }
+      @media(max-width: $notebook) {
+         left: rem(20);
+      }
+   }
+
+   &__next {
+      right: rem(-41);
+      @media(max-width: $notebook) {
+         right: rem(39);
+      }
+   }
+
+   &__page-link {
+      margin: 0 auto;
+      margin-top: rem(40);
+   }
+}

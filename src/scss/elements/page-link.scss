@@ -1,0 +1,21 @@
+.page-link {
+   max-width: max-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: rem(20) rem(40);
+   border-radius: em(100);
+   background-color: var(--clr-yellow);
+   font-weight: 700;
+   line-height: 1.25;
+   transition: all 0.32s ease-in-out;
+   @media(any-hover: hover) {
+      &:hover {
+         filter: drop-shadow(0px 4px 15px rgba(251, 188, 27, 0.6));
+      }
+   }
+   &:focus {
+      filter: drop-shadow(0px 4px 15px rgba(251, 188, 27, 0.6));
+   }
+}
