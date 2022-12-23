@@ -4,6 +4,8 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 $(function() {
+
+
    $('.hero__slider').on('init', function(event, slick){
       let dots = $(".hero__pagination .slick-dots li");
       dots.each( function(k, v){
@@ -14,10 +16,21 @@ $(function() {
          $(this).find("button").text(text);
       });
    });
+
+
    $(".hero__slider").slick({
       dots: true,
       arrows: false,
       appendDots: $(".hero__pagination"),
       infinite: false,
    });
+
+   if ($(".sales-slider .sales-card").length > 3) {
+      $(".sales-slider").slick({
+         dots: false,
+         arrow: true,
+         infinite: false,
+         slidesToShow: 3,
+      })
+   }
 });
