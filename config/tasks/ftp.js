@@ -1,15 +1,16 @@
 import { ftpSetting } from "../settings/path.js";
-import gutil from "gulp-util";
-import ftp from "vinyl-ftp";
+import vinylFTP from "vinyl-ftp"
+import util from "gulp-util";
 
 export function ftp() {
-   configFTP.log = gutil.log;
-   const connection = ftp.create(ftpSetting);
-   return app.gulp.src(`${app.path.buildFolder}/`)      
+   ftpSetting.log = util.log;
+   const connection = vinylFTP.create(ftpSetting);
+   return app.gulp.src(`${app.path.buildFolder}/**/*.*`)      
       .pipe(app.plugins.plumber(
          app.plugins.notify.onError({
             "title": "FTP",
             "message": "Error: <%= error.message %>",
          })
       ))
+      .pipe(connection.dest(`/${app.path.ftp}/${app.path.rootFolder.toLowerCase()}`));
 }

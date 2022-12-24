@@ -125,6 +125,8 @@ body {
 @import "elements/page-link";
 @import "elements/tip";
 @import "elements/request-form";
+@import "elements/info-cta";
+@import "elements/tips";
 
 // Подключение крупных блоков
 @import "blocks/hero";
@@ -132,6 +134,9 @@ body {
 @import "blocks/steps";
 @import "blocks/sales";
 @import "blocks/request";
+@import "blocks/choose";
+@import "blocks/about";
+@import "blocks/faq";
 
 // Подключение стилей общих элементов проекта
 @import 'common';

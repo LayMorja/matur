@@ -19,6 +19,13 @@
       }
    }
 
+   &__tips {
+      position: absolute;
+      z-index: 2;
+      top: rem(17);
+      left: rem(20);
+   }
+
    > div {
       margin-top: rem(20);
       display: flex;
@@ -65,41 +72,5 @@
       @media(max-width: $mobileNormal) {
          font-size: rem(20);
       }
-   }
-
-   button {
-      margin-top: rem(20);
-      @extend %fl-a-ct;
-      width: 100%;
-      padding: rem(15) rem(30);
-      border: 1px solid var(--clr-yellow);
-      filter: drop-shadow(0px 4px 50px rgba(251, 188, 27, 0.31));
-      border-radius: em(100);
-      transition: all 0.32s ease-in-out;
-      @media(any-hover: hover) {
-         &:hover {
-            box-shadow: inset 2px 2px 5px rgba(251, 188, 27, 0.31),
-                              2px 2px 25px rgba(251, 188, 27, 0.31);
-            svg {
-               transform: translateX(rem(5));
-            }
-         }
-      }
-      @media(max-width: $mobileSmall) {
-         padding: rem(12) rem(20);
-      }
-   }
-
-   button span {
-      font-weight: 700;
-      line-height: 1.25;
-   }
-
-   button svg {
-      display: block;
-      width: rem(35);
-      height: rem(35);
-      margin-left: rem(10);
-      transition: all 0.32s ease-in-out;
    }
 }

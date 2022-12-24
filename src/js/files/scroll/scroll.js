@@ -71,14 +71,15 @@ export function pageNavigation() {
 // Работа с шапкой при скроле
 export function headerScroll() {
 	addWindowScrollEvent = true;
-	const header = document.querySelector('.header__lower');
+	const header = document.querySelector('.header');
 	const headerShow = header.hasAttribute('data-scroll-show');
-	const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
+	// const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
 	const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
 	let scrollDirection = 0;
-	let timer;
+	// let timer;
 	document.addEventListener("windowScroll", function (e) {
       const scrollTop = window.scrollY;
+      console.log(scrollTop, scrollDirection);
 		if (scrollTop >= startPoint) {
 			!header.classList.contains('_header-scroll') ? header.classList.add('_header-scroll') : null;
 			if (headerShow) {

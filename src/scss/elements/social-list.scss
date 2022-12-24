@@ -30,4 +30,14 @@
       height: rem(18);
       transition: transform 0.32s ease-in-out;
    }
+   @media(max-width: $mobileSmall) {         
+      li a {
+         width: rem(30);
+         height: rem(30);
+         svg {
+            width: rem(16);
+            height: rem(16);
+         }
+      }
+   }
 }

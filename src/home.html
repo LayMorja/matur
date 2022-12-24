@@ -170,6 +170,9 @@
                      <div class="sales__slider sales-slider">
                         <article class="sales-card">
                            <a href="#" class="sales-card__image-box">
+                              <div class="sales-card__tips tips">
+                                 <span class="tips__yl">-10%</span>
+                              </div>
                               <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
                            </a>
                            <div>
@@ -182,7 +185,7 @@
                                  <span class="sales-card__new-price _ac">54 699 Р</span>
                               </div>
                            </div>
-                           <button data-popup="#">
+                           <button class="info-cta" data-popup="#">
                               <span>Рассчитать стоимость</span>
                               <svg>
                                  <use xlink:href="@img/sprite.svg#right-arrow">
@@ -191,6 +194,9 @@
                         </article>
                         <article class="sales-card">
                            <a href="#" class="sales-card__image-box">
+                              <div class="sales-card__tips tips">
+                                 <span class="tips__rd">-10%</span>
+                              </div>
                               <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
                            </a>
                            <div>
@@ -203,7 +209,7 @@
                                  <span class="sales-card__new-price _ac">54 699 Р</span>
                               </div>
                            </div>
-                           <button data-popup="#">
+                           <button class="info-cta" data-popup="#">
                               <span>Рассчитать стоимость</span>
                               <svg>
                                  <use xlink:href="@img/sprite.svg#right-arrow">
@@ -212,6 +218,9 @@
                         </article>
                         <article class="sales-card">
                            <a href="#" class="sales-card__image-box">
+                              <div class="sales-card__tips tips">
+                                 <span class="tips__wh">HIT!</span>
+                              </div>
                               <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
                            </a>
                            <div>
@@ -223,7 +232,7 @@
                                  <span class="sales-card__new-price">54 699 Р</span>
                               </div>
                            </div>
-                           <button data-popup="#">
+                           <button class="info-cta" data-popup="#">
                               <span>Рассчитать стоимость</span>
                               <svg>
                                  <use xlink:href="@img/sprite.svg#right-arrow">
@@ -232,6 +241,11 @@
                         </article>
                         <article class="sales-card">
                            <a href="#" class="sales-card__image-box">
+                              <div class="sales-card__tips tips">
+                                 <span class="tips__yl">-10%</span>
+                                 <span class="tips__wh">HIT!</span>
+                                 <span class="tips__rd">-10%</span>
+                              </div>
                               <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
                            </a>
                            <div>
@@ -244,7 +258,7 @@
                                  <span class="sales-card__new-price _ac">54 699 Р</span>
                               </div>
                            </div>
-                           <button data-popup="#">
+                           <button class="info-cta" data-popup="#">
                               <span>Рассчитать стоимость</span>
                               <svg>
                                  <use xlink:href="@img/sprite.svg#right-arrow">
@@ -338,6 +352,132 @@
                            <input type="tel" autocomplete="off" name="Номер телефона" placeholder="номер телефона">
                         </div>
                         <input type="submit" value="Оставить заявку">
+                     </form>
+                  </div>
+               </div>
+            </section>
+            <section class="page__choose choose">
+               <div class="choose__container container" style="background-image: url('@img/choose/vector.svg');">                  
+                  <div class="choose__block-header block-header">
+                     <svg>
+                        <use xlink:href="@img/sprite.svg#right-arrow">
+                     </svg>
+                     <h2>Почему нас выбирают:</h2>
+                     <p>Лучшие цены на кухни от производителя в городе</p>
+                  </div>
+                  <ul class="choose__body">
+                     <li>
+                        <div class="choose__image-box">
+                           <img src="@temp/choose/01.jpg" alt="">
+                        </div>
+                        <h3><strong>Собственное</strong><br> производство</h3>
+                     </li>
+                     <li>
+                        <div class="choose__image-box">
+                           <img src="@temp/choose/02.jpg" alt="">
+                        </div>
+                        <h3><strong>2 года гарантии</strong><br> на все наши кухни</h3>
+                     </li>
+                     <li>
+                        <div class="choose__image-box">
+                           <img src="@temp/choose/03.jpg" alt="">
+                        </div>
+                        <h3><strong>Экологичные</strong><br> материалы</h3>
+                     </li>
+                     <li>
+                        <div class="choose__image-box">
+                           <img src="@temp/choose/04.jpg" alt="">
+                        </div>
+                        <h3><strong>Команда штатных</strong><br> сборщиков</h3>
+                     </li>
+                     <li>
+                        <div class="choose__image-box">
+                           <img src="@temp/choose/05.jpg" alt="">
+                        </div>
+                        <h3><strong>500+ видов</strong><br> фасадов</h3>
+                     </li>
+                  </ul>
+               </div>
+            </section>
+            <section class="page__about about" id="about" style="background-image: url('@temp/about/bg.jpg');">
+               <div class="about__container container">
+                  <div class="about__content">
+                     <h2>
+                        Мы изготавливаем кухни <span class="_yl">на заказ</span> из долговечных и экологичных материалов
+                     </h2>
+                     <p>
+                        Фасады на основе МДФ, облицованной декоративным пластиком или мебельной пленкой. Такие фасады устойчивы к внешним воздействиям и долгое время сохраняют неизменный внешний вид.
+                     </p>
+                     <p>
+                        Столешницы с антивандальным декоративным покрытием, прочные и невосприимчивые к царапанью, выдерживающие проверку временем.
+                     </p>
+                     <a class="info-cta" href="#">
+                        <span>Узнать больше о компании</span>
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#right-arrow">
+                        </svg>
+                     </a>
+                  </div>
+                  <button class="about__button">
+                     <svg>
+                        <use xlink:href="@img/sprite.svg#play">
+                     </svg>
+                     <span>Смотреть видео</span>
+                  </button>
+               </div>
+            </section>
+            <section class="page__faq faq">
+               <div class="faq__container container">
+                  <div class="faq__block-header block-header">
+                     <svg>
+                        <use xlink:href="@img/sprite.svg#right-arrow">
+                     </svg>
+                     <h2>Часто задаваемые вопросы</h2>
+                     <p>Лучшие цены на кухни от производителя в городе</p>
+                  </div>
+                  <div class="faq__body">
+                     <div data-spollers class="spollers">
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">Сколько времени займет сборка кухни?</button>
+                           <div class="spollers__body">
+                              Все наши блюда уже приготовлены нашими поварами, под контролем шеф-повара. После получения Вам необходимо убрать блюда в холодильник. Для каждого блюда у нас есть краткая инструкция к хранению и разогреву, если блюдо необходимо есть горячим.
+                           </div>
+                        </div>
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">Сколько времени займет сборка кухни?</button>
+                           <div class="spollers__body">
+                              Все наши блюда уже приготовлены нашими поварами, под контролем шеф-повара. После получения Вам необходимо убрать блюда в холодильник. Для каждого блюда у нас есть краткая инструкция к хранению и разогреву, если блюдо необходимо есть горячим.
+                           </div>
+                        </div>
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">Сколько времени займет сборка кухни?</button>
+                           <div class="spollers__body">
+                              Все наши блюда уже приготовлены нашими поварами, под контролем шеф-повара. После получения Вам необходимо убрать блюда в холодильник. Для каждого блюда у нас есть краткая инструкция к хранению и разогреву, если блюдо необходимо есть горячим.
+                           </div>
+                        </div>
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">Сколько времени займет сборка кухни?</button>
+                           <div class="spollers__body">
+                              Все наши блюда уже приготовлены нашими поварами, под контролем шеф-повара. После получения Вам необходимо убрать блюда в холодильник. Для каждого блюда у нас есть краткая инструкция к хранению и разогреву, если блюдо необходимо есть горячим.
+                           </div>
+                        </div>
+                        <div class="spollers__item">
+                           <button type="button" data-spoller class="spollers__title">Сколько времени займет сборка кухни?</button>
+                           <div class="spollers__body">
+                              Все наши блюда уже приготовлены нашими поварами, под контролем шеф-повара. После получения Вам необходимо убрать блюда в холодильник. Для каждого блюда у нас есть краткая инструкция к хранению и разогреву, если блюдо необходимо есть горячим.
+                           </div>
+                        </div>
+                     </div>
+                     <form action="./mail.php" method="POST" class="faq__form" style="background-image: url('@temp/faq/form.jpg');">
+                        <h3>Остались вопросы?</h3>
+                        <p>Оставьте заявку, и наш специалистнайдет решение для Вас!</p>
+                        <div class="faq__form-item">
+                           <textarea name="Комментарий" id="comment" autocomplete="off" placeholder="текст комментария"></textarea>
+                        </div>
+                        <div class="faq__form-item">
+                           <input type="tel" name="Номер телефона" autocomplete="off" placeholder="номер телефона">
+                        </div>
+                        <input type="submit">
                      </form>
                   </div>
                </div>

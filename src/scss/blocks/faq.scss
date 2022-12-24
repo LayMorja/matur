@@ -1,0 +1,170 @@
+.faq {
+   margin: rem(100) 0;
+   @media(max-width: $mobileSmall) {
+      margin: rem(80) 0;
+   }
+   &__container {
+   }
+
+   &__block-header {
+      &:not(:last-child) {margin-bottom: rem(60);} 
+      @media(max-width: $mobileSmall) {
+         &:not(:last-child) {margin-bottom: rem(30);}
+      }
+   }
+
+   &__body {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .spollers {
+         max-width: rem(692);
+         width: 100%;
+         margin-right: rem(20);
+      }
+      @media(max-width: $tablet) {
+         flex-direction: column;
+         .spollers {
+            max-width: none;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: rem(40);
+         }
+      }
+   }
+
+   &__form {
+      display: flex;
+      flex-direction: column;
+      border-radius: rem(20);
+      padding: rem(42) rem(50) rem(58);
+      color: var(--clr-white);
+      @extend %bg-cov;
+      h3 {
+         font-weight: 900;
+         font-size: rem(24);
+         line-height: 120%;
+         @media(max-width: $mobileNormal) {
+            font-size: rem(22);
+         }
+         @media(max-width: $mobileSmall) {
+            font-size: rem(20);
+         }
+      }
+      p {
+         margin-top: rem(10);
+         font-weight: 700;
+         line-height: 1.25;
+         @media(max-width: $mobileSmall) {
+            font-size: rem(14);
+         }
+      }
+      input[type="submit"] {
+         min-height: rem(60);
+         padding: rem(20) rem(30);
+         border-radius: em(100);
+         background-color: var(--clr-yellow);
+         font-weight: 700;
+         line-height: 1.25;
+      }
+      @media(max-width: $tablet) {
+         margin: 0 auto;
+      }
+      @media(max-width: $mobileSmall) {
+         padding: rem(35) rem(30) rem(50);
+      }
+   }
+
+   &__form-item {
+      &:first-of-type {
+         margin-top: rem(40);
+      }
+      &:not(:last-child) {margin-bottom: rem(20);}
+      textarea,
+      input {
+         width: 100%;
+         border: 1px solid #FFFFFF;
+         padding: rem(20) rem(34);
+         background-color: transparent;
+         font-weight: 700;
+         line-height: 1.25;
+         color: var(--clr-white);
+         transition: box-shadow 0.3s ease-in-out;
+         @media(any-hover: hover) {
+            &:hover {
+               box-shadow: inset 2px 2px 15px rgba(255, 255, 255, 0.4);
+            }
+         }
+         &:focus {
+            outline: none;
+            box-shadow: inset 2px 2px 15px rgba(255, 255, 255, 0.4),
+            2px 2px 15px rgba(255, 255, 255, 0.4);
+         }
+      }
+      textarea {
+         height: rem(144);
+         resize: none;
+         border-radius: rem(20);
+      }
+      input {
+         height: rem(60);
+         border-radius: em(100);
+      }
+   }
+}
+.spollers {
+
+   &__item {
+      border-bottom: 1px solid #E5E7EB;
+   }
+
+   &__title {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: em(100);
+      text-align: left;
+      padding: rem(24) rem(32);
+      font-weight: 900;
+      font-size: rem(20);
+      line-height: 150%;
+      transition: all 0.32s ease-in-out;
+      &::after {
+         content: "";
+         margin-left: rem(10);
+         flex: 0 0 rem(12);
+         width: rem(12);
+         height: rem(12);
+         border-bottom: 2px solid #6D7280;
+         border-right: 2px solid #6D7280;
+         transform: rotate(45deg);
+         transition: all 0.32s ease-in-out;
+      }
+      &._spoller-active {
+         background-color: var(--clr-yellow);
+         &::after {
+            transform: rotate(-135deg) translate(rem(-2), rem(-2));
+            border-color: var(--clr-white);
+         }
+      }
+      @media(max-width: $mobileNormal) {
+         font-size: rem(18);
+      }
+      @media(max-width: $mobileSmall) {
+         font-size: rem(16);
+         padding: rem(12) rem(20);
+         border-radius: rem(20);
+      }
+   }
+
+   &__body {
+      padding: rem(20) rem(32) rem(30);
+      line-height: 160%;
+      color: #333333;      
+      @media(max-width: $mobileSmall) {
+         font-size: rem(14);
+         padding: rem(15) rem(20) rem(20);
+      }
+   }
+}

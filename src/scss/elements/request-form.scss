@@ -95,6 +95,7 @@
    }
 
    input[type="submit"] {
+      min-height: rem(60);
       padding: rem(20) rem(30);
       border-radius: em(100);
       background-color: var(--clr-yellow);
