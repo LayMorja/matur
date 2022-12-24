@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <title>Каталог</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">      
+      @@include("./html/_meta.html",{
+         "description":"",
+         "keywords":""
+      })
+      @@include("./html/_styles-vendors.html",{})
+      <link rel="shortcut icon" href="@resources/favicon.ico" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper" data-sticky>
+         @@include("./html/_header.html",{
+            "class":"header--inner",
+            "logo":"logo-dark.svg"
+         })
+         <main class="page">
+            <div class="page__breadcrumbs breadcrumbs container">
+               <ul>
+                  <li><a href="home.html"><span>Главная</span></a></li>
+                  <li><a href="#"><span>Каталог</span></a></li>
+                  <li><a href="#"><span>Прямые кухни</span></a></li>
+               </ul>
+            </div>
+            <section class="page__catalog-inner catalog-inner">
+               <div class="catalog-inner__container container">
+                  <div class="catalog-inner__inner-header inner-header">
+                     <h1>Прямые кухни</h1>
+                     <p>Лучшие цены на кухни от производителя в городе</p>
+                  </div>
+                  <div class="catalog-inner__filters">
+                     <ul>
+                        <li><button class="mixitup-control-active" data-filter="*">Все кухни</button></li>
+                        <li><button data-filter=".minimal">Минимализм</button></li>
+                        <li><button data-filter=".scand">Скандинавский стиль</button></li>
+                        <li><button data-filter=".modern">Современный стиль</button></li>
+                     </ul>
+                  </div>
+                  <div class="catalog-inner__body">
+                     <article class="sales-card minimal">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card scand">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card minimal">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card modern">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card minimal">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card scand">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card scand">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card minimal">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card modern">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                  </div>
+               </div>
+            </section>
+         </main>
+         @@include("./html/_footer.html",{})
+      </div>
+      @@include("./html/_js-vendors.html",{})
+   </body>
+</html>

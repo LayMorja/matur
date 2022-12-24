@@ -19,6 +19,11 @@ h2 {
    }
 }
 input[type="submit"] {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   height: rem(60);
+   border-radius: rem(100);
    cursor: pointer;
    transition: box-shadow 0.32s ease-in-out;
    @media(any-hover: hover) {

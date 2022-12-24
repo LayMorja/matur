@@ -1,0 +1,29 @@
+.breadcrumbs {
+   margin-bottom: rem(12);
+   ul {
+      @extend %fl-r-ct;
+   }
+   ul li a {
+      font-size: rem(14);
+      line-height: 1.25;
+      transition: opacity 0.2s ease-in-out;
+      @media(any-hover: hover) {
+         &:hover {
+            opacity: 0.6;
+         }
+      }
+      &:focus {
+         outline: none;
+         opacity: 0.6;
+      }
+   }
+   ul li:not(:last-child)::after {
+      content: "-";
+      margin: 0 rem(5);
+   }
+   ul li:last-child a {
+      font-weight: 700;
+   }
+}
+.container {
+}

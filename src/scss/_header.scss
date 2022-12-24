@@ -1,7 +1,7 @@
 //====================================================================================================
 .header {
    padding-top: rem(25);
-   
+   z-index: 20;
    &__upper {
       padding-bottom: rem(25);
       @extend %fl-r-ct;
@@ -51,6 +51,7 @@
    }
 
    &__lower {
+      z-index: 22;
       border-top: 1px dashed rgba(255, 255, 255, 0.5);
       border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
       .container {
@@ -113,6 +114,51 @@
       left: 0;
       width: 100%;
       z-index: 20;
+   }
+
+   &--inner {
+      .header__logo {
+         span {color: var(--clr-black);}
+         img {border-color: #d9d9d9;}
+      }
+      .social-list li a {box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);}
+      .menu__body > ul > li.has-child {
+         &::after {
+            background-image: url('@img/icons/menu-arrow--dark.svg');
+         }
+      }
+      .header__lower {
+         border-color: #828288;
+         &.sticked {
+            color: var(--clr-white);
+            .menu__body > ul > li.has-child {
+               &::after {
+                  background-image: url('@img/icons/menu-arrow.svg');
+               }
+            }
+            .menu__body > ul > li a::after {
+               background-color: var(--clr-white);
+            }
+         }
+      }
+      .icon-menu {
+         &::before,&::after, span {
+            background-color: var(--clr-black);
+            .menu-open & {
+               background-color: var(--clr-white);
+            }
+         }
+      }
+      margin-bottom: rem(45);
+      @media(max-width: $mobile) {
+         transition: transform 0.3s ease;
+         &._header-scroll.header {
+            background-color: rgba(255, 255, 255, 1);
+         }
+      }
+      @media(max-width: $mobileSmall) {
+         margin-bottom: rem(30);
+      }
    }
 
    @media(max-width: $mobile) {

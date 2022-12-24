@@ -1,0 +1,68 @@
+.catalog-inner {
+   margin-bottom: rem(100);
+   @media(max-width: $mobileSmall) {
+      margin-bottom: rem(80);
+   }
+   &__inner-header {
+      &:not(:last-child) {margin-bottom: rem(60);}
+      @media(max-width: $mobileSmall) {
+         &:not(:last-child) {margin-bottom: rem(30);}
+      }
+   }
+
+   &__filters {
+      margin-bottom: rem(24);
+      ul {
+         @extend %fl-r-ct;
+         flex-wrap: wrap;
+      }
+      ul li {
+         margin-bottom: rem(12);
+      }
+      ul li:not(:last-child) {
+         margin-right: rem(16);
+      }
+      ul li button {
+         padding: rem(8) rem(20);
+         font-weight: 700;
+         line-height: 1.25;
+         border: 1px solid var(--clr-yellow);
+         border-radius: em(20);
+         transition: all 0.32s ease-in-out;
+         @media(any-hover: hover) {
+            &:hover {
+               box-shadow: inset 2px 2px 5px rgba(251, 188, 27, 0.31),
+                                 2px 2px 25px rgba(251, 188, 27, 0.31);
+               svg {
+                  transform: translateX(rem(5));
+               }
+            }
+         }
+         &:focus {
+            outline: none;
+            box-shadow: inset 2px 2px 5px rgba(251, 188, 27, 0.31),
+                              2px 2px 25px rgba(251, 188, 27, 0.31);
+            svg {
+               transform: translateX(rem(5));
+            }
+         }
+         &.mixitup-control-active {
+            background-color: var(--clr-yellow);
+         }
+      }
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(rem(290), 1fr));
+      column-gap: rem(20);
+      row-gap: rem(60);
+      @media(max-width: $tablet) {
+         grid-template-columns: repeat(2, minmax(rem(290), 1fr));
+      }
+      @media(max-width: $mobileNormal) {
+         grid-template-columns: minmax(rem(290), 1fr);
+         row-gap: rem(40);
+      }
+   }
+}

@@ -49,6 +49,7 @@
     "gulp-zip": "latest",
     "inputmask": "latest",
     "lightgallery": "latest",
+    "mixitup": "^3.3.1",
     "nouislider": "latest",
     "sass": "latest",
     "smooth-scroll": "latest",

@@ -86,6 +86,7 @@
          &:not(:last-child) {margin-bottom: rem(15);}
       }
       > ul > li ul li a {
+         color: var(--clr-white);
          opacity: 0.7;
          font-size: rem(14);
          line-height: 1.25;
@@ -102,6 +103,7 @@
       }
       @media(max-width: $mobile) {
          position: fixed;
+         z-index: 20;
          top: 0;
          left: 0;
          width: 100vw;
@@ -127,9 +129,11 @@
          }
          > ul:not(.social-list) > li > a {
             font-size: rem(20);
+            color: var(--clr-white);
          }
          > ul > li ul li a {
             font-size: rem(16);
+            color: var(--clr-white);
          }
          > ul > li ul {
             position: static;
@@ -176,7 +180,7 @@
 		height: rem(16);
       margin-left: rem(20);
 		cursor: pointer;
-		z-index: 5;
+		z-index: 31;
 		span,
 		&::before,
 		&::after {

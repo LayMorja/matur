@@ -79,7 +79,6 @@ export function headerScroll() {
 	// let timer;
 	document.addEventListener("windowScroll", function (e) {
       const scrollTop = window.scrollY;
-      console.log(scrollTop, scrollDirection);
 		if (scrollTop >= startPoint) {
 			!header.classList.contains('_header-scroll') ? header.classList.add('_header-scroll') : null;
 			if (headerShow) {

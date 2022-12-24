@@ -1,0 +1,39 @@
+.inner-header {
+   h1 {
+      position: relative;
+      font-weight: 900;
+      font-size: rem(36);
+      line-height: 120%;
+      &::before {
+         content: "";
+         position: absolute;
+         top: 0.6em;
+         left: -100%;
+         width: 100%;
+         margin-left: rem(-15);
+         border: 2px dashed var(--clr-yellow);
+      }
+   }
+   p {
+      margin-top: rem(4);
+      font-weight: 500;
+      font-size: rem(18);
+      line-height: 1.25;
+   }
+   @media(max-width: $mobileNormal) {
+      h1 {
+         font-size: rem(32);
+      }
+      p {
+         font-size: rem(16);
+      }
+   }
+   @media(max-width: $mobileSmall) {
+      h1 {
+         font-size: rem(28);
+      }
+      p {
+         font-size: rem(14);
+      }
+   }
+}

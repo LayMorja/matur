@@ -127,6 +127,8 @@ body {
 @import "elements/request-form";
 @import "elements/info-cta";
 @import "elements/tips";
+@import "elements/breadcrumbs";
+@import "elements/inner-header";
 
 // Подключение крупных блоков
 @import "blocks/hero";
@@ -137,6 +139,7 @@ body {
 @import "blocks/choose";
 @import "blocks/about";
 @import "blocks/faq";
+@import "blocks/catalog-inner";
 
 // Подключение стилей общих элементов проекта
 @import 'common';
