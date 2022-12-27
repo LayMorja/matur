@@ -14,18 +14,18 @@
          @extend %fl-r-ct;
          &::after {
             content: "";
-            transform: translateY(rem(2));
-            flex: 0 0 rem(14);
-            width: rem(14);
-            height: rem(14);
+            transform: translateY(rem(-2)) rotate(45deg);
+            flex: 0 0 rem(8);
+            width: rem(8);
+            height: rem(8);
+            border-bottom: 1px solid var(--clr-white);
+            border-right: 1px solid var(--clr-white);
             margin-left: rem(8);
-            @extend %bg-con;
-            background-image: url('@img/icons/menu-arrow.svg');
             transition: all 0.32s ease-in-out;
          }
          @media(any-hover: hover) {
             &:hover::after {
-               transform: translateY(rem(2)) rotate(180deg);
+               transform: translateY(rem(2)) rotate(-135deg);
             }
          }
       }

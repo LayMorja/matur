@@ -18,6 +18,7 @@
    &__prev,
    &__next {
       position: absolute;
+      z-index: 2;
       top: 30%;
       transform: translateY(-30%);
       transition: opacity 0.32s ease-in-out;

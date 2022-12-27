@@ -124,7 +124,7 @@
       .social-list li a {box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);}
       .menu__body > ul > li.has-child {
          &::after {
-            background-image: url('@img/icons/menu-arrow--dark.svg');
+            border-color: var(--clr-black);
          }
       }
       .header__lower {
@@ -133,7 +133,7 @@
             color: var(--clr-white);
             .menu__body > ul > li.has-child {
                &::after {
-                  background-image: url('@img/icons/menu-arrow.svg');
+                  border-color: var(--clr-white);
                }
             }
             .menu__body > ul > li a::after {

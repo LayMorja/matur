@@ -4,6 +4,9 @@
 ._ac {
    color: var(--clr-accent);
 }
+[hidden] {
+   display: none;
+}
 h2 {
    font-weight: 900;
    font-size: rem(36);
@@ -22,9 +25,11 @@ input[type="submit"] {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
-   height: rem(60);
+   min-height: rem(60);
+   padding: rem(20) rem(30);
    border-radius: rem(100);
    cursor: pointer;
+   background-color: var(--clr-yellow);
    transition: box-shadow 0.32s ease-in-out;
    @media(any-hover: hover) {
       &:hover {

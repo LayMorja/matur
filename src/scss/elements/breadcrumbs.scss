@@ -2,6 +2,7 @@
    margin-bottom: rem(12);
    ul {
       @extend %fl-r-ct;
+      flex-wrap: wrap;
    }
    ul li a {
       font-size: rem(14);
@@ -17,8 +18,9 @@
          opacity: 0.6;
       }
    }
-   ul li:not(:last-child)::after {
+   ul li:not(:first-child)::before {
       content: "-";
+      font-weight: 400;
       margin: 0 rem(5);
    }
    ul li:last-child a {

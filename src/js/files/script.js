@@ -33,7 +33,48 @@ $(function() {
       arrows: false,
       appendDots: $(".hero__pagination"),
       infinite: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      speed: 1200,
    });
+
+   $(".choose__body").slick({
+      dots: false,
+      arrows: false,
+      autoplay: true,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      autoplaySpeed: 1500,
+      slidesToShow: 5,
+      infinite: true,
+      responsive: [
+         {
+            breakpoint: 1070,
+            settings: {
+               slidesToShow: 4,
+            }
+         },
+         {
+            breakpoint: 870,
+            settings: {
+               slidesToShow: 3,
+            }
+         },
+         {
+            breakpoint: 640,
+            settings: {
+               slidesToShow: 2,
+               centerMode: true,
+            }
+         },
+         {
+            breakpoint: 540,
+            settings: {
+               slidesToShow: 1,
+            }
+         }
+      ]
+   })
 
    if ($(".sales-slider .sales-card").length > 3) {
       $(".sales-slider").slick({
@@ -41,8 +82,8 @@ $(function() {
          arrow: true,
          infinite: false,
          slidesToShow: 3,
-         prevArrow: $(".sales__prev"),
-         nextArrow: $(".sales__next"),
+         prevArrow: '<button class="sales__prev" aria-label="Previous" type="button"><svg><use xlink:href="../img/sprite.svg#slider-button"></svg></button>',
+         nextArrow: '<button class="sales__next" aria-label="Next" type="button"><svg><use xlink:href="../img/sprite.svg#slider-button"></svg></button>',
          responsive: [
             {
                breakpoint: 768,
@@ -61,4 +102,49 @@ $(function() {
          ]
       })
    }
+
+
+   $(".product__big-slider").slick({
+      slidesToShow: 1,
+      prevArrow: '<button class="product__big-prev" aria-label="Previous" type="button"><svg><use xlink:href="../img/sprite.svg#right-arrow"></svg></button>',
+      nextArrow: '<button class="product__big-next" aria-label="Next" type="button"><svg><use xlink:href="../img/sprite.svg#right-arrow"></svg></button>',
+      dots: false,
+      asNavFor: ".product__mini-slider",
+      infinite: false,
+   })
+
+   $(".product__mini-slider").slick({
+      prevArrow: "",
+      nextArrow: '<button class="product__mini-next" aria-label="Next" type="button"><svg><use xlink:href="../img/sprite.svg#slider-button"></svg></button>',
+      dots: false,
+      asNavFor: ".product__big-slider",
+      slidesToShow: 4,
+      infinite: false,
+      focusOnSelect: true,
+      responsive: [
+         {
+            breakpoint: 768,
+            settings: {
+               arrows: false,
+            }
+         },
+         {
+            breakpoint: 400,
+            settings: {
+               slidesToShow: 3,
+               arrows: false,
+            }
+         }
+      ]
+   })
+
+	var selector = '.product__big-slider .slick-slide';
+   
+	$().fancybox({
+		selector : selector,
+		backFocus : false,
+		afterShow: function(instance, current) {
+			current.opts.$orig.closest(".slick-initialized").slick('slickGoTo', parseInt(current.index), true);
+		}
+	});
 });

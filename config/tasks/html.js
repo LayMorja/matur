@@ -20,9 +20,9 @@ export function html() {
          locale: ['ru', 'en-US'],
          htmlEntity: { type: "name" },
       }))
-      .pipe(app.plugins.replace(/@img\//g, "/img/"))
+      .pipe(app.plugins.replace(/@img\//g, "img/"))
       .pipe(app.plugins.replace(/@resources\//g, "/"))
-      .pipe(app.plugins.replace(/@temp\//g, "/temp/"))
+      .pipe(app.plugins.replace(/@temp\//g, "temp/"))
       .pipe(app.plugins.replace("NEW_PROJECT_NAME", `${app.path.rootFolder}`))
       // .pipe(webphtml())
       .pipe(app.plugins.if(

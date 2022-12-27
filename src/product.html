@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <title>Прямая кухня "Клеерс"</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">      
+      @@include("./html/_meta.html",{
+         "description":"",
+         "keywords":""
+      })
+      @@include("./html/_styles-vendors.html",{})
+      <link rel="shortcut icon" href="@resources/favicon.ico" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper" data-sticky>
+         @@include("./html/_header.html",{
+            "class":"header--inner",
+            "logo":"logo-dark.svg"
+         })
+         <main class="page">
+            <div class="page__breadcrumbs breadcrumbs container">
+               <ul>
+                  <li><a href="home.html"><span>Главная</span></a></li>
+                  <li><a href="#"><span>Каталог</span></a></li>
+                  <li><a href="catalog.html"><span>Прямые кухни</span></a></li>
+                  <li><a href="#"><span>Клеерс</span></a></li>
+               </ul>
+            </div>
+            <section class="page__product product">
+               <div class="product__about container">
+                  <div class="product__sliders">
+                     <div class="product__big-slider">
+                        <a href="@temp/sales/01.jpg" class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </a>
+                        <a href="@temp/sales/01.jpg" class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </a>
+                        <a href="@temp/sales/01.jpg" class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </a>
+                        <a href="@temp/sales/01.jpg" class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </a>
+                        <a href="@temp/sales/01.jpg" class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </a>
+                     </div>
+                     <div class="product__mini-slider">                           
+                        <div class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </div>
+                        <div class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </div>
+                        <div class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </div>
+                        <div class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </div>
+                        <div class="product__slider-image">
+                           <img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="product__content">
+                     <h1>Клеерс</h1>
+                     <span>Прямая кухня</span>
+                     <div class="product__price-all">
+                        <div>Цена <br> со скидкой</div>
+                        <div class="product__price"><span>84 569 Р</span><span>54 699 Р</span></div>
+                        <span>-10%</span>
+                     </div>
+                     <div class="product__benefits">
+                        <ul>
+                           <li>
+                              <h2>30 дней</h2>
+                              <span>срок изготовления</span>
+                           </li>
+                           <li>
+                              <h2>500+</h2>
+                              <span>видов фасадов</span>
+                           </li>
+                        </ul>
+                        <ul>
+                           <li>
+                              <h2>100+</h2>
+                              <span>видов столешниц</span>
+                           </li>
+                           <li>
+                              <h2>Бессплатный</h2>
+                              <span>выезд дизайнера</span>
+                           </li>
+                        </ul>
+                     </div>
+                     <button class="info-cta info-cta--revert" data-popup="#callback">
+                        <span>Рассчитать стоимость</span>
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#right-arrow--white">
+                        </svg>
+                     </button>
+                     <button class="info-cta" data-popup="#callback">
+                        <span>Рассчитать стоимость</span>
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#right-arrow">
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+               <div class="product__chars">
+                  <div data-tabs class="tabs">
+                     <nav class="tabs__navigation">
+                        <div class="container" data-tabs-titles>
+                           <button type="button" class="tabs__title _tab-active">Описание</button>
+                           <button type="button" class="tabs__title">Характеристики</button>
+                           <button type="button" class="tabs__title">Как купить</button>
+                        </div>
+                     </nav>
+                     <div data-tabs-body class="tabs__content">
+                        <div class="tabs__body container product-description">
+                           <div class="product-description__text">
+                              <p>
+                                 Белоснежная кухня «Клеерс» — это утонченность и определенное легкое настроение.
+                              </p>
+                              <p>
+                                 Такая кухня станет отличным местом для вдохновения и творческих экспериментов и поможет начать новую страницу вашей собственной «книги рецептов»!
+                              </p>
+                              <p>
+                                 Угловая форма позволяет расположить духовку, раковину и холодильник в идеальный «рабочий треугольник»,
+                              </p>
+                              <p>
+                                 благодаря чему вы максимально полно насладитесь процессом приготовления и значительно сэкономите время и силы.
+                              </p>
+                           </div>
+                           <div class="product-description__image"><img src="@temp/sales/01.jpg" alt="Прямая кухня Клеерс"></div>
+                        </div>
+                        <div class="tabs__body container">
+                           Содержимое второго таба
+                        </div>
+                        <div class="tabs__body container">
+                           Содержимое третьего таба
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="page__sales sales" id="sales">
+               <div class="sales__container container">
+                  <div class="sales__block-header block-header">
+                     <svg>
+                        <use xlink:href="@img/sprite.svg#right-arrow">
+                     </svg>
+                     <h2>Вам могут понравиться</h2>
+                     <p>Кухни в похожем стиле</p>
+                  </div>
+                  <div class="sales__slider sales-slider">
+                     <article class="sales-card">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__rd">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#callback">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__wh">HIT!</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__new-price">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#callback">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                     <article class="sales-card">
+                        <a href="#" class="sales-card__image-box">
+                           <div class="sales-card__tips tips">
+                              <span class="tips__yl">-10%</span>
+                              <span class="tips__wh">HIT!</span>
+                              <span class="tips__rd">-10%</span>
+                           </div>
+                           <img src="@temp/sales/01.jpg" alt="Клеерс прямая кухня">
+                        </a>
+                        <div>
+                           <div>
+                              <p>Прямая кухня</p>
+                              <h3>Клеерс</h3>
+                           </div>
+                           <div>
+                              <span class="sales-card__old-price">84 569 Р</span>
+                              <span class="sales-card__new-price _ac">54 699 Р</span>
+                           </div>
+                        </div>
+                        <button class="info-cta" data-popup="#callback">
+                           <span>Рассчитать стоимость</span>
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#right-arrow">
+                           </svg>
+                        </button>
+                     </article>
+                  </div>
+               </div>
+            </section>
+            <section class="page__steps steps" id="steps" style="background-image: url('@temp/steps/bg.jpg');">
+               <div class="steps__container container">
+                  <div class="steps__body">
+                     <div class="steps__tip tip">
+                        только до 1 января
+                     </div>
+                     <h2>
+                        Выезд дизайнера <span class="_yl">бесплатно</span>
+                     </h2>
+                     <p>
+                        Лучшие цены на кухни от производителя в городе
+                     </p>
+                     <ul class="steps__steps">
+                        <li>
+                           <span>
+                              Выезд дизайнера в удобное для вас время
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              Бесплатный замер с учетом всех нюансов
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              Бесплатный 3D проект вашей будущей кухни
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              Скидки до 70%
+                           </span>
+                        </li>
+                     </ul>
+                     <form action="./mail.php" method="POST" class="steps__form">
+                        <input autocomplete="off" type="tel" name="Номер телефона" placeholder="номер телефона">
+                        <input type="submit" value="Оставить заявку">
+                     </form>
+                  </div>
+               </div>
+            </section>
+         </main>
+         @@include("./html/_footer.html",{})
+      </div>
+      @@include("./html/_popup.html", {})
+      @@include("./html/_js-vendors.html",{})
+   </body>
+</html>

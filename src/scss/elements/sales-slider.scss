@@ -1,12 +1,30 @@
 .sales-slider {
    &:not(.slick-initialized) {
-      @extend %fl-r-ct;
-      justify-content: space-between;
-      .sales-card {
-         flex: 1 1 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(rem(290), 1fr));
+      gap: rem(20);
+      .sales__prev,
+      .sales__next {
+         display: none;
+      }
+      @media(max-width: $tablet) {
+         grid-template-columns: repeat(2, minmax(rem(290), 1fr));
+      }
+      @media(max-width: $tablet) and (min-width: $mobileNormal) {
+         .sales-card:last-child {
+            grid-column: span 2;
+            .sales-card__image-box {
+               padding-bottom: 30%;
+            }
+         }
+      }
+      @media(max-width: $mobileNormal) {
+         grid-template-columns: 1fr;
       }
    }
-   .slick-slide:not(:last-child) {
-      margin-right: rem(19);
+   &.slick-initialized {
+      .slick-slide:not(:last-child) {
+         margin-right: rem(19);
+      }
    }
 }
